@@ -7,7 +7,7 @@ admin.initializeApp();
 const db = admin.firestore();
 const app = express();
 
-app.use(cors({ origin: "https://us-central1-first-api-rest-7cb0a.cloudfunctions.net/api" })); // Habilita o CORS para permitir solicitações de determinada origem
+app.use(cors({ origin: true })); // Habilita o CORS para permitir solicitações de qualquer origem
 
 // Endpoint para obter todos os clientes
 app.get("/cliente", async (req, res) => {
